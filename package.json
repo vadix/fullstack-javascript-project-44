@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/vadix/fullstack-javascript-project-44/workflows/hexlet-check/badge.svg)](https://github.com/vadix/fullstack-javascript-project-44/actions)",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "code": "bin/brain-games.js"
+    "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +22,13 @@
   },
   "homepage": "https://github.com/vadix/fullstack-javascript-project-44#readme",
   "dependencies": {
-    "link": "^1.5.1"
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "link": "^1.5.1",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint-plugin-jest": "^27.2.1"
   }
 }
