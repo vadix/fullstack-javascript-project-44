@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import makeWelcome from './cli.js';
 
 const roundsCount = 3;
-const runEngine = (rules, makeRound) => {
+export default (rules, makeRound) => {
   const name = makeWelcome();
   console.log(rules);
   for (let i = 0; i < roundsCount; i += 1) {
@@ -17,5 +17,3 @@ const runEngine = (rules, makeRound) => {
   }
   console.log(`Congratulations, ${name}!`);
 };
-
-export default runEngine;
