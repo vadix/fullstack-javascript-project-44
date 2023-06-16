@@ -1,15 +1,17 @@
 #!/usr/bin/env node
-import { runEngine } from '../src/index.js';
-import { getRandomInt, isEven } from '../src/cli.js';
+import runEngine from '../src/index.js';
+import getRandomInRange from '../src/utils.js';
+
+const isEven = (number) => number % 2 === 0;
 
 function brainEven() {
-    const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-    const maxInt = 100;
-    const round = () => {
-        const question = getRandomInt(maxInt);
-        const answer = isEven(question)? 'yes': 'no';
-        return [question,answer];
-    }
-    runEngine(rules,  round);
-};
+  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const round = () => {
+    const question = getRandomInRange();
+    const answer = isEven(question) ? 'yes' : 'no';
+    return [question, answer];
+  };
+  runEngine(rules, round);
+}
+
 brainEven();
