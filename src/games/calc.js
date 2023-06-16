@@ -11,8 +11,9 @@ const calculation = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      throw new Error(`Invalid operator - ${operator}`);
+      break;
   }
+  return new Error();
 };
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
