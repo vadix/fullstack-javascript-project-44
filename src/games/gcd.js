@@ -8,6 +8,7 @@ function gcd(x, y) {
 }
 
 const rules = 'Find the greatest common divisor of given numbers.';
+
 const generateRound = () => {
   const randomNumber1 = getRandomInRange();
   const randomNumber2 = getRandomInRange();

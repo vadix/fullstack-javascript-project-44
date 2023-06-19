@@ -2,6 +2,7 @@ import runEngine from '../index.js';
 import getRandomInRange from '../utils.js';
 
 const rules = 'What is the result of the expression?';
+
 const calculation = (num1, num2, operator) => {
   switch (operator) {
     case '+':
@@ -11,13 +12,13 @@ const calculation = (num1, num2, operator) => {
     case '*':
       return num1 * num2;
     default:
-      break;
+      throw new Error(`Operator ${operator} - is incorrect!`);
   }
-  return new Error();
 };
+
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  return operators[getRandomInRange(0, operators.length)];
+  return operators[getRandomInRange(0, operators.length - 1)];
 };
 
 const generateRound = () => {
